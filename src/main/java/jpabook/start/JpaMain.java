@@ -20,14 +20,7 @@ public class JpaMain {
 
 
             tx.begin(); //트랜잭션 시작
-//            logic(em);  //비즈니스 로직
-
-            Member member = new Member();
-            member.setId("123");
-            member.setAge(20);
-            member.setUsername("member1");
-            em.persist(member);
-
+            logic(em);  //비즈니스 로직
             tx.commit();//트랜잭션 커밋
 
         } catch (Exception e) {
